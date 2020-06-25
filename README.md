@@ -8,6 +8,15 @@ C++ features.
 
 ## Tasks
 
+### Current Tasks
+
+* On Board:
+    * Add a field, which can hold 20x20 cells
+    * Add a method, which will print the current board on screen
+* Test it by changing main() to :
+    * Create a board instance
+    * Show it
+
 ### Create a board
 
 We need a SIZExSIZE board that we can represent in memory.
