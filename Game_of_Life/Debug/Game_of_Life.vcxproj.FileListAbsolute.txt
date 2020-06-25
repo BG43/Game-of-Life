@@ -1,2 +1,0 @@
-C:\Users\gindl\source\repos\Game-of-Life\Game_of_Life\Debug\Game_of_Life.exe
-C:\Users\gindl\source\repos\Game-of-Life\Game_of_Life\Debug\Game_of_Life.pdb
