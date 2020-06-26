@@ -30,4 +30,7 @@
 *.exe
 *.out
 *.app
-/Game_of_Life/.vs/Game_of_Life/v16
+**/.vs
+**/Debug
+**/Release
+
