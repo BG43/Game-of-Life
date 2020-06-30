@@ -2,13 +2,21 @@
 //
 
 #include <iostream>
+#include <string>
 #include "Board.h"
 
 int main()
 {
-    Board board; //creating a board object of the class Board
-    board.print(); 
+    std::string line;
     std::cout << "Conway's Game of Life\n";
+    Board board; //creating a board object of the class Board
+    board.setCell(0, 0, true);
+    // for these tests, we will run a simulaton 100 times
+    for (int g = 0; g < 100; ++g) {
+        board.print();
+        std::cin >> line;
+        board = board.next();
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
