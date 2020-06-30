@@ -3,11 +3,19 @@
 
 #include <iostream>
 #include "Board.h"
+#include "guiboard.h"
 
 int main()
 {
     Board board; //creating a board object of the class Board
-    board.print(); 
+
+    GuiBoard bd(20,20, 
+        [&](int x, int y) { return board.read(x,y); },
+        [&](int x, int y, bool val) { board.write(x,y,val);});
+    bd.setup();
+
+    board.print();
+
     std::cout << "Conway's Game of Life\n";
 }
 
