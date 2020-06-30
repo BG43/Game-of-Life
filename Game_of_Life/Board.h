@@ -27,8 +27,8 @@ public:
         // what do we do in the inner loop ?
         // => we have a determinate position in the matrix, print the value that is on that position, on the board (0 or 1)
 
-        for (int i = 0; i < 19; i++) {
-            for (int j = 0; j < 19; j++) {
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 20; j++) {
                 cout<<board[i][j];
             }
             cout << endl;
@@ -36,5 +36,11 @@ public:
 
 	// cout<<
 	}
+    bool read(int x, int y){
+        return board[y][x];
+    }
+    void write(int x, int y, bool v) {
+        board[y][x] = v;
+    }
 };
 
