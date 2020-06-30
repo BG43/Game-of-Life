@@ -31,22 +31,20 @@ public:
 
         // ... take the state of the current board,
 
-         // how to read the initial board
-        //result.setCell(0, 0, false); // how to write into the resulting board
-        //result.setCell(1, 1, true);
+        //auto t = board[i][j]; how to read the initial board
+        //result.setCell(1, 1, true); how to write into the resulting board
+        
 
         for (int i = 0; i < 19; i++) {
             for (int j = 0; j < 19; j++) {
 
-                if (board[i][j] == true) {
+                if (board[i][j]) {
                     auto t = board[i][j];
                     result.setCell(i, j, false);
-                    result.setCell(i + 1, j + 1, true);
-                    i = j = 19;
-
+                    result.setCell(i + 1, j + 1, t);
+                    break;
                 }
             }
-
         }
 
         // use it to change the result board
