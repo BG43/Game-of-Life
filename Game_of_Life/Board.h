@@ -10,10 +10,18 @@ public:
     // it will return the previous state of the cell just modified
     bool setCell(int x, int y, bool state) 
     {
+        x %= 20;
+        y %= 20;
         auto previous = board[x][y];
         board[x][y] = state; 
         return previous;
     }
+
+    bool getCell(int x, int y)
+    {
+        return board[y][x];
+    }
+
 
         // 00000     00000
         // 01000     00000
@@ -34,9 +42,8 @@ public:
         //auto t = board[i][j]; how to read the initial board
         //result.setCell(1, 1, true); how to write into the resulting board
         
-
-        for (int i = 0; i < 19; i++) {
-            for (int j = 0; j < 19; j++) {
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 20; j++) {
 
                 if (board[i][j]) {
                     auto t = board[i][j];
@@ -46,13 +53,12 @@ public:
                 }
             }
         }
-
-        // use it to change the result board
         return result;
-    }
+	// cout<<
+	}
     void print() {
-        for (int i = 0; i < 19; i++) {
-            for (int j = 0; j < 19; j++) {
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 20; j++) {
                 cout << board[i][j];
             }
             cout << endl;
