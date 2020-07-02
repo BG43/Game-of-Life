@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game_of_Life.cpp" />
+    <ClCompile Include="guiboard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />

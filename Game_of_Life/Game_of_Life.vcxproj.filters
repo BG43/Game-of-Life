@@ -18,6 +18,9 @@
     <ClCompile Include="Game_of_Life.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="guiboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h">

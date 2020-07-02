@@ -7,8 +7,7 @@ void GuiBoard::setup(int side_size)
 {
     CImg<unsigned char> visualization(side_size * _width, side_size * _height, 1, 3, 0);
     const unsigned char red[] = {255, 0, 0}, black[] = {0, 0, 0};
-    CImgDisplay disp;
-    disp.display(visualization);
+    CImgDisplay disp(visualization,"setup");
     while(!disp.is_closed()) {
         disp.wait();
         if (disp.button()) {

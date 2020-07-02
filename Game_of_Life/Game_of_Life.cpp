@@ -8,19 +8,20 @@
 
 int main()
 {
-    std::string line;
     std::cout << "Conway's Game of Life\n";
     Board board; //creating a board object of the class Board
 
-    GuiBoard bd(20,20, 
-        [&](int x, int y) { return board.getCell(x,y); },
-        [&](int x, int y, bool val) { board.setCell(x,y,val);});
-    bd.setup();
+    // GuiBoard bd(20,20, 
+    //     [&](int x, int y) { return board.getCell(x,y); },
+    //     [&](int x, int y, bool val) { board.setCell(x,y,val);});
+    // bd.setup();
+
+    board.setCell(0,0,true);
 
     // for these tests, we will run a simulaton 100 times
     for (int g = 0; g < 100; ++g) {
         board.print();
-        std::cin >> line;
+        std::cin.get();
         board = board.next();
     }
 }
