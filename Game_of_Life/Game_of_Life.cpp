@@ -16,7 +16,9 @@ int main()
     //     [&](int x, int y, bool val) { board.setCell(x,y,val);});
     // bd.setup();
 
-    board.setCell(0,0,true);
+    board.setCell(1,1,true);
+    board.setCell(1,2, true);
+    board.setCell(1,3, true);
 
     // for these tests, we will run a simulaton 100 times
     for (int g = 0; g < 100; ++g) {
